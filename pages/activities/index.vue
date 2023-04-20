@@ -1,23 +1,21 @@
 <template>
-    <div>
-        <p>activities</p>
+  <div class="row row-cols-lg-3 row-cols-md-2 ">
+    <div v-for="activity in activities.data">
+      <ActivityCard :activity="activity" />
     </div>
-    <div>
-        <!--
-        <div v-for="a in Activities">
-            <ActivityCard :activity="a"/>
-        </div>
-        -->
-    </div>
+  </div>
 </template>
 
 <script setup>
-    // import { ActivityCard } from '~/.nuxt/components';
-    
-    // const {data: Activities} = await useFetch() //TODO: get data from your cms
-
+const { data: activities, refresh } = await useFetch('https://strapi-nacci.onrender.com/api/activities?populate=*')
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+article {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 </style>

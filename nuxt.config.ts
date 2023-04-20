@@ -1,7 +1,20 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from 'nuxt/config'
+
 export default defineNuxtConfig({
-  modules: [],
-  css: [],
+  ssr: true, //default behavior but okay para sure
+  modules: [
+    '@nuxtjs/strapi',
+  ],
+  plugins: [
+    
+  ],
+  strapi: {
+    url: process.env.STRAPI_URL || 'https://strapi-nacci.onrender.com'
+  },
+  css: [
+    'assets/pico/custom_pico.css',
+    'assets/bootstrap-grid/css/pico-bootstrap-grid.min.css'
+  ],
   app: {
     head: {
       title: 'Nature Awareness & Conservation Club, Inc.',
@@ -9,5 +22,5 @@ export default defineNuxtConfig({
         { name: 'description', content: ' '} //TODO: insert desc
       ]
     }
-  }
+  },
 });
