@@ -20,6 +20,9 @@ export default defineNuxtConfig({
       title: 'Nature Awareness & Conservation Club, Inc.',
       meta: [
         { name: 'description', content: ' '} //TODO: insert desc
+      ],
+      link: [
+        {rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"}
       ]
     }
   },

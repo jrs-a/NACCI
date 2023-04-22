@@ -5,7 +5,9 @@
             <p>{{ date }}</p>
         </hgroup>
     </section>
-    <div v-html="activity.attributes.Body"></div>
+    <section>
+        <div v-html="activity.attributes.Body"></div>
+    </section>
 </template>
 
 <script setup>

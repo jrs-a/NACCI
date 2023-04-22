@@ -8,15 +8,16 @@
 </template>
 
 <script setup>
+const { pageIndex } = useRoute().params
 
 const { find } = useStrapi()
-const { data: activities, pending, refresh, error } = await useAsyncData(
+const { data: activities, pending, refresh, error} = await useAsyncData(
   'activities',
   () => find('activities', {
     populate: 'CoverPhoto',
     sort: 'createdAt:desc',
     publicationState: 'live',
-    pagination: {page: 1, pageSize:10, withCount: true},
+    pagination: {page: pageIndex, pageSize:10, withCount: true},
   })
 )
 
@@ -27,3 +28,6 @@ const prevPage = page - 1
 const nextPage = page + 1
 
 </script>
+
+<style scoped>
+</style>

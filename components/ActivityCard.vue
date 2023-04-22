@@ -1,6 +1,8 @@
 <template>
   <article>
-    {{ imgurl }}
+    <div class="imgholder">
+      <img :src="imgurl" alt="thumbnail">
+    </div>
     <h5>{{ activity.attributes.Title }}</h5>
     <nuxt-link :to="`/activities/${activity.id}`" role="button">Explore this activity</nuxt-link>
   </article>
@@ -19,5 +21,7 @@ function getImgurl() {
 </script> 
 
 <style scoped>
-
+.imgholder {
+  margin-bottom: 1em;
+}
 </style>

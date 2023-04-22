@@ -5,14 +5,15 @@
                 <h1>error {{error.statusCode}}</h1>
                 <h3>{{error.message}}</h3>
             </hgroup>
-            <a role="button" href="/">return to home page</a>
+            <a role="button" href="/" @click="handleError">return to home page</a>
         </div>
     </div>
 </template>
 
 <script setup>
     defineProps(['error'])
-    const handleClearError = () => clearError({redirect: '/'})
+    const handleError = () => clearError({ redirect: '/' })
+
 </script>
 
 <style lang="scss" scoped>
@@ -20,7 +21,6 @@ hgroup {
     text-align: center;
 }
 .container {
-    // margin-top: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
