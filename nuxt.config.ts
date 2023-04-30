@@ -1,9 +1,10 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
-  ssr: true, //default behavior but okay para sure
+  ssr: false, //default behavior but okay para sure
   modules: [
     '@nuxtjs/strapi',
+    '@nuxtjs/supabase'
   ],
   plugins: [
     
