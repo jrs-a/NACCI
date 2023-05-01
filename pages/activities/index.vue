@@ -1,5 +1,5 @@
 <template>
-  <div class="row row-cols-lg-3 row-cols-md-2 ">
+  <div>
     <div v-for="activity in activities.data">
       <ActivityCard :activity="activity" />
     </div>

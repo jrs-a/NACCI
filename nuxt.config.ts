@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   ssr: false, //default behavior but okay para sure
   modules: [
     '@nuxtjs/strapi',
-    '@nuxtjs/supabase'
+    '@nuxtjs/supabase',
   ],
   plugins: [
     
