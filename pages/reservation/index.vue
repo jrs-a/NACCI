@@ -1,5 +1,6 @@
 <template>
     <div>
+      <h1>reservation</h1>
         <article>
         <form>
             <input type="name" placeholder="Group Name" v-model="groupname"/>
@@ -26,6 +27,24 @@
     console.log('hello')
     await create('reservation', { Name: groupname.value, Location: location.value, Date: date.value, Participants: participants.value, PointPerson: pointperson.value, Contact: contact.value })
 
+}
+definePageMeta({
+    middleware: ['auth']
+})
+const user = useSupabaseUser()
+onMounted(() => {
+    watchEffect(() => {
+        if (!user.value) {
+            navigateTo('/')
+        }
+    })
+})
+
+const client = useSupabaseClient()
+
+const logout = async () => {
+    client.auth.signOut(); 
+    navigateTo('/')
 }
   </script>
   

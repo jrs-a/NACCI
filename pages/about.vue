@@ -1,24 +1,16 @@
 <template>
-    <div>
-        <h2>About</h2>
-        
-    </div>
+    <section>
+        <div class="center"><h2>About us</h2></div>
+    </section>
+    
 </template>
 
 <script setup>
-definePageMeta({
-    middleware: ['auth']
-})
-const user = useSupabaseUser()
-onMounted(() => {
-    watchEffect(() => {
-        if (!user.value) {
-            navigateTo('/')
-        }
-    })
-})
+
 </script>
 
 <style scoped>
-
+.center {
+    text-align: center;
+}
 </style>

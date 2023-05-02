@@ -17,6 +17,7 @@
     "sass-loader": "^10.4.1"
   },
   "dependencies": {
+    "@nuxt/http": "^0.6.4",
     "@nuxthq/ui": "^1.2.10",
     "@nuxthq/ui-edge": "^1.2.10-28014805.8830d84",
     "@supabase/supabase-js": "^2.21.0"

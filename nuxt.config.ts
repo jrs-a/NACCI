@@ -1,10 +1,10 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
-  ssr: false, //default behavior but okay para sure
+  ssr: true, //default behavior but okay para sure
   modules: [
     '@nuxtjs/strapi',
-    '@nuxtjs/supabase',
+    '@nuxtjs/supabase'
   ],
   plugins: [
     
@@ -21,6 +21,9 @@ export default defineNuxtConfig({
       title: 'Nature Awareness & Conservation Club, Inc.',
       meta: [
         { name: 'description', content: ' '} //TODO: insert desc
+      ],
+      link: [
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons'}
       ]
     }
   },

@@ -1,6 +1,6 @@
 <template>
   <article>
-    {{ imgurl }}
+    <img :src="imgurl" alt="">
     <h5>{{ activity.attributes.Title }}</h5>
     <nuxt-link :to="`/activities/${activity.id}`" role="button">Explore this activity</nuxt-link>
   </article>
